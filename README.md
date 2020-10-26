@@ -9,17 +9,20 @@ A simple downloader in Python!
 
 -----------
 ### Features
-- [x] Download any images-account
-- [x] Download any videos-account
+- [x] Download any images-account (highlights, tags, stories...)
+- [x] Download any videos-account (igtv too!)
 - [x] Log-in System for download Private Accounts
-- [x] Clear System, for correctly clear the metadata
+- [x] Auto Log-in System (you are not forced to re-enter your credentials every time!)
+- [x] Multi log-in for correctly manage private accounts
+- [x] Metadata Clear System
+- [x] Auto Update System (match all news media, from collected account)
 
 -----------
 ### Download
-Name | Type | Description
+Name | Type | Description | Status
 --- | --- | ---
-`Main.py` | *PythonFile* | Source Code
-`Main.exe` | *ExecutableFile* | 32-bit Program
+`Main.py` | *PythonFile* | Source Code | Available
+`Main.exe` | *ExecutableFile* | 32-bit Program | Not-Shared
 
 -----------
 ### About
