@@ -24,11 +24,8 @@ GUIDE
 
 # Program Library
 import os
-import time
-import colorama
 from colorama import Fore, Style
 from pathlib import Path
-from os import path
 
 # ===============================================================================================================================================================================
 
