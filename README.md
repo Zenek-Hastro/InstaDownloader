@@ -20,7 +20,7 @@ A simple downloader in Python!
 -----------
 ### Download
 Name | Type | Description | Status
---- | --- | --- |
+--- | --- | --- | --- |
 `Main.py` | *PythonFile* | Source Code | Available
 `Main.exe` | *ExecutableFile* | 32-bit Program | Not-Shared
 
