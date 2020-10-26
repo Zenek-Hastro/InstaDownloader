@@ -1,10 +1,11 @@
+#                                                                               I N S T A  D O W N L O A D E R
 # This tool allow you to download all media from an instagram account 
 # Coded by Zenek (https://github.com/Zenek-Hastro)
 # Version 1.1b (first build version 1.0b)
 
 # ===============================================================================================================================================================================
-""" 
-REQUIREMENTS
+"""                                                                                 
+                                                                                        REQUIREMENTS
  -Python (version 3.5 or >)
  -PIP3 
  -Instaloader
@@ -12,7 +13,7 @@ REQUIREMENTS
 """ 
 # ===============================================================================================================================================================================
 """ 
-GUIDE
+                                                                                          GUIDE
  -Install   Python:        https://www.python.org/downloads/
  -Install   pip3:          https://pip.pypa.io/en/stable/installing/
  -Instal    Instaloader:   https://instaloader.github.io/installation.html
@@ -43,9 +44,11 @@ if IGlogin.startswith('y'):
     clear()
     account = input('Enter your instagram account> ')
     os.system(f"instaloader --login {account}")
+
 elif IGlogin.startswith('n'):
     clear()
     print(Fore.RED+"\t!IF YOU DOESN'T LOGIN, YOU COULD NOT DOWNLOAD ANY PRIVATE ACCOUNTS!\n\n")
+
 else:
     clear()
     print("\n\nERROR: YOU MUST TYPE (y)/(n)!\n\n")
