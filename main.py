@@ -39,14 +39,19 @@ def start(): os.system('start') #Open Console
 # ===============================================================================================================================================================================
 
 # Login System
+clear()
 IGlogin = input('Would you like login on instagram (y/n)? ').lower()
 if IGlogin.startswith('y'):
     clear()
     account = input('Enter your instagram account> ')
     os.system(f"instaloader --login {account}")
-else:
+elif IGlogin.startswith('n'):
     clear()
     print(Fore.RED+"\t!IF YOU DOESN'T LOGIN, YOU COULD NOT DOWNLOAD ANY PRIVATE ACCOUNTS!\n\n")
+else:
+    clear()
+    print("\n\nERROR: YOU MUST TYPE (y)/(n)!\n\n")
+    exit()
     
 
 # Start Downloading System
