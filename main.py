@@ -45,11 +45,11 @@ list_of_lists = [] # check users
 
 IGlogin = input('Would you like login on instagram (y/n)? ').lower()
 
-if (os.path.isfile("users.zk") and IGlogin.startswith('y')):
+if (os.path.isfile("users.zh") and IGlogin.startswith('y')):
     LoadSession = input('We have found a session already opened! Would you like load it (y/n)?').lower()
     if LoadSession.startswith('y'):
         clear()
-        f = open("users.zk", "r")
+        f = open("users.zh", "r")
         account = f.read()
         user_login_status = 1
         os.system(f"instaloader --login {account}")
@@ -60,7 +60,7 @@ if (IGlogin.startswith('y') and user_login_status == 0):
     user_login_status = 1
     os.system(f"instaloader --login {account}")
     # Save currently session (only nickname, NO PASSWORD!)
-    file_object = open("users.zk", "w")
+    file_object = open("users.zh", "w")
     file_object.write(account)
     file_object.close
 
@@ -75,7 +75,7 @@ elif IGlogin.startswith('n'):
 users_update = input('Would you like check profiles updates from collected account (y/n)? ').lower()
 
 if (users_update.startswith('y')):
-    with open('account.zk', 'r') as f:
+    with open('account.zh', 'r') as f:
         account_list = [line.strip() for line in f]
 
     # Get list lenght
@@ -102,7 +102,7 @@ clear()
 name = input(Fore.WHITE+"Enter Profile Name To Download: ")
 
 # Save Account (used for check the updates!)
-with open('account.zk', 'r') as f:
+with open('account.zh', 'r') as f:
     account_list = [line.strip() for line in f]
 
 if(name in account_list):
@@ -111,10 +111,10 @@ if(name in account_list):
   time.sleep(5)
 else:
     f.close
-    file_object = open("account.zk", "a")
+    file_object = open("account.zh", "a")
     file_object.write(name + "\n")
     file_object.close
-    print("\nAdded " +name+" to account.zk!\n")
+    print("\nAdded " +name+" to account.zh!\n")
 
 
 if (user_login_status == 0):
