@@ -29,6 +29,7 @@ Name | Type | Description | Status
  Type | Description
 --- | --- | 
 `Developer` | *Zenek* 
+`Language` | *Python*
 `First Release` | *v1.0b* 
 `Current Release` | *v1.3b* 
 
@@ -44,10 +45,9 @@ Name | Type | Description | Status
 
 ### Version 1.1b
 
-- [x] Clear System, for correctly clear the metadata
 - [x] Login System (download private content from private account!)
 - [x] Unnecessary libs removed, code clear, new comments
-- [x] Minor bug fix
+- [x] Now you can download Highlights, Stories, Igtv and Tags (from private accounts too) !
 
 ### Version 1.2b
 
@@ -62,8 +62,8 @@ Name | Type | Description | Status
 - [x] Bug fix and optimizations
 - [x] Improved Stability
 - [x] Now the program ask you to open the downloaded folder once downloaded (instead of auto pop-up it!)
-- [x] All the files opened are now correclty closed
-- [x] Metadata Clear is now correctly call once the program have downloaded all files (and not one per account)
+- [x] All the files opened (*.zh) are now correclty closed
+- [x] *Metadata Clear* is now correctly called once the program have downloaded all files (and not one per account)
 
 
 
