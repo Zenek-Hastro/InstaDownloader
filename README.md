@@ -30,7 +30,7 @@ Name | Type | Description | Status
 --- | --- | 
 `Developer` | *Zenek* 
 `First Release` | *v1.0b* 
-`Current Release` | *v1.2b* 
+`Current Release` | *v1.3b* 
 
 -----------
 ### ChangeLog
