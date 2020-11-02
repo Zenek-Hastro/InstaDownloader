@@ -58,4 +58,12 @@ Name | Type | Description | Status
 - [x] Added Update system for check the lastest media on all accounts collected
 - [x] Bug fix and Stability Improved
 
+### Version 1.3b
+- [x] Bug fix and optimizations
+- [x] Improved Stability
+- [x] Now the program ask you to open the downloaded folder once downloaded (instead of auto pop-up it!)
+- [x] All the files opened are now correclty closed
+- [x] Metadata Clear is now correctly call once the program have downloaded all files (and not one per account)
+
+
 

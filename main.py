@@ -43,16 +43,17 @@ clear()
 user_login_status = 0  # check the log-in status
 list_of_lists = [] # check users
 
-IGlogin = input('Would you like login on instagram (y/n)? ').lower()
+IGlogin = input('Would you like login on instagram (y/n)?> ').lower()
 
 if (os.path.isfile("users.zh") and IGlogin.startswith('y')):
-    LoadSession = input('We have found a session already opened! Would you like load it (y/n)?').lower()
+    LoadSession = input('We have found a session already opened! Would you like load it (y/n)?> ').lower()
     if LoadSession.startswith('y'):
         clear()
         f = open("users.zh", "r")
         account = f.read()
         user_login_status = 1
         os.system(f"instaloader --login {account}")
+        f.close()
         
 if (IGlogin.startswith('y') and user_login_status == 0):
     clear()
@@ -72,7 +73,7 @@ elif IGlogin.startswith('n'):
 # ############################################################################################################################################################################# #
 
 # Check For Updates 
-users_update = input('Would you like check profiles updates from collected account (y/n)? ').lower()
+users_update = input('Would you like check profiles updates from collected account (y/n)?> ').lower()
 
 if (users_update.startswith('y')):
     with open('account.zh', 'r') as f:
@@ -85,32 +86,33 @@ if (users_update.startswith('y')):
     for i in range(length): 
         os.system(f"instaloader --fast-update --login={account} {account_list[i]}")
 
-        # Clear Metadata 
-        for root, dirs, files in os.walk(account_list[i]):
-            for file in files:
-                if file.endswith(".txt") or file.endswith(".xz"):
-                    #print(os.path.join(root, file)) No need to print all files deleted. Uncomment for check it !
-                    os.remove(os.path.join(root, file)) 
+    f.close()  
 
-        print("\n\nUpdated: " +account_list[i]+ "\n")
-        time.sleep(3) 
+    # Clear Metadata 
+    for root, dirs, files in os.walk(account_list[i]):
+        for file in files:
+            if file.endswith(".txt") or file.endswith(".xz"):
+                #print(os.path.join(root, file)) No need to print all files deleted. Uncomment for check it !
+                os.remove(os.path.join(root, file)) 
+
+    print("\n\nUpdated: " +account_list[i]+ "\n")
+    time.sleep(3) 
 
 # ############################################################################################################################################################################# #
 
 # Start Downloading System
 clear()
-name = input(Fore.WHITE+"Enter Profile Name To Download: ")
+name = input(Fore.WHITE+"Enter Profile Name To Download> ")
 
 # Save Account (used for check the updates!)
 with open('account.zh', 'r') as f:
     account_list = [line.strip() for line in f]
 
 if(name in account_list):
-  f.close
   print("\nALREADY ON THIS LIST!\n")
+  f.close()
   time.sleep(5)
 else:
-    f.close
     file_object = open("account.zh", "a")
     file_object.write(name + "\n")
     file_object.close
@@ -144,7 +146,16 @@ for root, dirs, files in os.walk(name):
 # ############################################################################################################################################################################# #
 
 # Opening Downloaded Folder
-path = name
-path = os.path.realpath(path)
-os.startfile(path)
+dir_flag= input(Fore.WHITE+"Would you like open Downloaded Folder (y/n)?> ")
+if (dir_flag.startswith('y')):
+    clear()
+    print("Opening Folder...")
+    path = name
+    path = os.path.realpath(path)
+    os.startfile(path)
+elif (dir_flag.startswith('n')):
+    clear()
+    print("All Files downloaded!")
+else:
+    print("Invalid Choise!")
 # ==============================================================================================================================================================================#
